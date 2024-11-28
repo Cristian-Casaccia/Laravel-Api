@@ -1,0 +1,55 @@
+
+
+html, body {
+    height: 100%;
+    margin: 0;
+    overflow: hidden; /* Impedisce lo scroll */
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.result {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #e0f7fa;
+    border: 1px solid #00acc1;
+    border-radius: 4px;
+}
+
+.error {
+    color: #d9534f;
+}
+.disp_none
+{
+    display: none;
+}
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+
+  @media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+      font-size: 3.5rem;
+    }
+  }
+  #breweries-table {
+    table-layout: fixed;
+    width: 100%;
+}
