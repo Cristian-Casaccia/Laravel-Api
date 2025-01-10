@@ -1,0 +1,30 @@
+services:
+    laravel-api:
+        build: .
+        ports:
+            - 8080:80
+        volumes:
+            - ./:/var/www/html
+        networks:
+            - larbackend
+    mysql:
+        image: mysql:lts
+        environment:
+            MYSQL_ROOT_PASSWORD: 'password'
+            MYSQL_DATABASE: '${DB_DATABASE}'
+            MYSQL_USER: '${DB_USERNAME}'
+            MYSQL_PASSWORD: '${DB_PASSWORD}'
+        ports:
+            - 3307:3306
+        networks:
+            - larbackend
+        volumes:
+            - mysqldata:/var/lib/mysql
+
+
+networks:
+    larbackend:
+        driver: bridge
+volumes:
+    mysqldata:
+        driver: local
