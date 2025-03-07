@@ -21,6 +21,12 @@ RUN a2enmod rewrite headers
 RUN docker-php-ext-configure gd --with-freetype --with-jpeg && \
     docker-php-ext-install gd pdo_mysql zip
 
+# # Install PhpMyAdmin
+# RUN curl -sSL https://www.phpmyadmin.net/downloads/phpMyAdmin-latest-all-languages.tar.gz | tar xvz -C /var/www/html --strip-components=1
+
+# # Copy the custom phpMyAdmin configuration file
+# COPY config.inc.php /var/www/html/config.inc.php
+
 # Set Apache DocumentRoot for Laravel
 ENV APACHE_DOCUMENT_ROOT=/var/www/html/public
 

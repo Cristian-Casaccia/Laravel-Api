@@ -5,7 +5,7 @@ function insertCredential() {
 document.getElementById('login-button').addEventListener('click', async function () {
     const username = document.getElementById('username').value;
     const password = document.getElementById('password').value;
-    const url = "http://localhost:8000/api/user-profile";
+    const url = "http://localhost:8080/api/user-profile";
     let bearerToken;
 
     try {
